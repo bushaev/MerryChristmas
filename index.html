@@ -316,21 +316,49 @@
             text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
         }
 
-        .location {
-            font-size: 1.5rem;
-            font-style: italic;
-            color: rgba(232, 244, 248, 0.8);
-            margin-top: 10px;
+        .description {
+            font-size: 1.4rem;
+            color: rgba(232, 244, 248, 0.9);
+            margin-top: 20px;
+            line-height: 1.6;
             animation: textSlide 1s ease-out 1.4s backwards;
         }
 
+        .map-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--gold) 0%, #b8941e 100%);
+            color: var(--midnight);
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            animation: textSlide 1s ease-out 1.6s backwards;
+            letter-spacing: 1px;
+        }
+
+        .map-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #e8c55b 0%, var(--gold) 100%);
+        }
+
+        .map-button::before {
+            content: '📍 ';
+            margin-right: 8px;
+        }
+
         .footer {
-            margin-top: 60px;
+            margin-top: 50px;
             text-align: center;
             font-size: 1rem;
             color: rgba(232, 244, 248, 0.6);
             font-style: italic;
-            animation: textSlide 1s ease-out 1.6s backwards;
+            animation: textSlide 1s ease-out 1.8s backwards;
         }
 
         /* Glow effect */
@@ -380,8 +408,13 @@
                 font-size: 1.8rem;
             }
 
-            .location {
+            .description {
                 font-size: 1.2rem;
+            }
+
+            .map-button {
+                font-size: 1rem;
+                padding: 12px 35px;
             }
         }
 
@@ -409,6 +442,15 @@
 
             .highlight {
                 font-size: 1.5rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+            }
+
+            .map-button {
+                font-size: 0.95rem;
+                padding: 12px 30px;
             }
         }
     </style>
@@ -440,13 +482,20 @@
         <div class="divider"></div>
 
         <p class="invitation-text">
-            You're cordially invited to celebrate
+            You're invited on
             <span class="highlight">8th of January</span>
-            <span class="location">at this special place</span>
         </p>
 
+        <p class="description">
+            Get ready for a fun night of comedy, laughter, and pure enjoyment surrounded by the best people in the world!
+        </p>
+
+        <a href="https://maps.app.goo.gl/EdKdYjWmz1jXq5mh7" target="_blank" class="map-button">
+            Get Directions
+        </a>
+
         <div class="footer">
-            ✦ We can't wait to see you ✦
+            ✦ Can't wait to see you there ✦
         </div>
     </div>
 
